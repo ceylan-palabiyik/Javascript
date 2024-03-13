@@ -4,6 +4,11 @@ const inputtext = document.getElementById("inputText");
 const todocontainer = document.getElementById("toDoContainer");
 
 addbutton.addEventListener("click", function () {
+
+  if(!inputtext.value){
+    alert("lütfen bir içerik giriniz")
+    return
+  }
   const paragraph = document.createElement("p");
   paragraph.classList.add("paragraph-styling");
   todocontainer.appendChild(paragraph);
