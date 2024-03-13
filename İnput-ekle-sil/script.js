@@ -5,7 +5,7 @@ const todocontainer = document.getElementById("toDoContainer");
 
 addbutton.addEventListener("click", function () {
 
-  if(!inputtext.value){
+  if(!inputtext.value.trim()){
     alert("lütfen bir içerik giriniz")
     return
   }
