@@ -1,0 +1,119 @@
+body{
+    background-color: bisque;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+ display: flex;
+ flex-wrap: wrap;
+ background-color: #fff;
+ width: 100%;
+ padding: 10px;
+ 
+ box-shadow: 0 0 3px 0 rgba(0,0,0,.3);
+ margin: 0px auto;
+}
+
+.gallery{
+   flex-basis: 32.8%;
+   margin: 2px;
+   opacity: .8;
+   cursor: pointer;
+}
+
+.gallery:hover{
+    opacity: 1;
+}
+
+.gallery img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.ligthbox{
+    position: fixed;
+    display: none;
+    background-color: rgba(0,0,0,.6);
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    top: 0;
+    left: 0;
+}
+
+.ligthbox-content{
+    position: relative;
+    width: 65%;
+    height: 60%;
+    margin: 2px auto;
+    margin-top: 100px;
+}
+
+.ligthbox-content img{
+    width: 100%;
+    height: 100%;
+    border: 6px solid #fff;
+    object-fit: cover;
+}
+
+.ligthbox-prev,
+.ligthbox-next
+{
+    position: absolute;
+    background-color:rgba(0,0,0,.8) ;
+    color: #fff;
+    padding: 8px;
+    top: 45%;
+    cursor: pointer;
+}
+
+.ligthbox-close{
+    position: absolute;
+    background-color:rgba(0,0,0,.8) ;
+    color: #fff;
+    padding: 8px;
+    top: 1%;
+    cursor: pointer;
+    right: 0;
+}
+
+.ligthbox-prev{
+    left: 0;
+}
+
+.ligthbox-next{
+    right: 0;
+}
+
+
+@media(max-width: 768px){
+    .container{
+        width: 100%;
+    }
+    .gallery{
+        flex-basis: 48%;
+    }
+
+    .ligthbox-content{
+        width: 80%;
+        height: 60%;
+        margin: 2rem auto;
+    }
+}
+
+@media(max-width:480px){
+    .gallery{
+        flex-basis: 100%;
+    }
+    .ligthbox-content{
+        width: 90%;
+        margin: 2rem auto;
+    }
+}
